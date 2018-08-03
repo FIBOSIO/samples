@@ -1,0 +1,1 @@
+exports.hi = user => console.error('in contract:', user);
