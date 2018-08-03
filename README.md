@@ -6,11 +6,8 @@
 # download FIBOS Samples
 git clone git@github.com:FIBOSIO/samples.git
 
-# install FIBOS
+# If you do not have FIBOS installed, execute the following command.
 curl -s https://fibos.io/download/installer.sh |sh
-
-# init project
-fibos --init
 
 # install package
 fibos --install fibos.js
