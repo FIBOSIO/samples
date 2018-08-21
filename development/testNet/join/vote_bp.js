@@ -1,10 +1,11 @@
 var FIBOS = require('fibos.js');
 var config = {
 	"chainId": "cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f",
-	"producer-name": "eosio",
-	"public-key": "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
-	"private-key": "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3",
-	"httpEndpoint": "http://127.0.0.1:8888",
+	"producer-name": "producer-name",
+	"public-key": "producer public key",
+	"private-key": "producer private key",
+	"httpEndpoint": "bp network info",
+	"url": "http://producer-name.io"
 };
 
 var fibos = FIBOS({
@@ -17,6 +18,8 @@ var fibos = FIBOS({
 	}
 });
 
-var result = fibos.getBlockSync(1);
+var ctx = fibos.contractSync("eosio");
 
-console.log(result);
+ctx.voteproducerSync(config["producer-name"], "", ["producer-name"]);
+
+
