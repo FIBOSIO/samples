@@ -9,14 +9,6 @@ var config = {
 // new FIBOS client
 var fibos = FIBOS(config["private-key"]);
 
-//新建 hello 账户
-fibos.newaccountSync({
-  creator: 'eosio',
-  name: "hello",
-  owner: config["public-key"],
-  active: config["public-key"]
-});
-
 //setcode
 var js_code = fs.readTextFile("./hello/hello.js");
 fibos.setcodeSync(config["contractName"], 0, 0, fibos.compileCode(js_code));
