@@ -1,6 +1,6 @@
 ## FIBOS Samples
 
-+ 文档参考：[FIBOS Document Development Guide](https://fibos.io/docs/guide/readme.md.html)
++ 文档参考：[FIBOS Document Development Guide](https://fibos.io/docs/guide/basic/readme.md.html)
 
 ```bash
 # download FIBOS Samples
@@ -10,5 +10,7 @@ git clone git@github.com:FIBOSIO/samples.git
 curl -s https://fibos.io/download/installer.sh |sh
 
 # install package
+cd samples
+fibos --init
 fibos --install fibos.js
 ```
